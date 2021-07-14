@@ -14,30 +14,30 @@ OCPINDENT = ocp-indent \
 
 .PHONY: all
 all :
-	dune build @all
+	esy dune build @all
 
 .PHONY: lib
 lib :
-	dune build src
+	esy dune build src
 
 .PHONY: test
 test :
-	OCAMLRUNPARAM=b dune exec ./tests/main.exe
+	OCAMLRUNPARAM=esy b dune exec ./tests/main.exe
 
 .PHONY: covtest
 covtest :
 	rm -rf _coverage
 	rm -rf bisect*.coverage
-	BISECT_ENABLE=yes OCAMLRUNPARAM=b dune exec ./tests/main.exe
+	BISECT_ENABLE=yes OCAMLRUNPARAM=esy b dune exec ./tests/main.exe
 	bisect-ppx-report html
 
 .PHONY: debug
 debug :
-	dune exec ./debug/main.exe
+	esy dune exec ./debug/main.exe
 
 .PHONY: doc
 doc :
-	dune build @doc
+	esy dune build @doc
 
 .PHONY: format
 format :
@@ -52,4 +52,4 @@ cinaps :
 
 .PHONY : clean
 clean:
-	dune clean
+	esy dune clean
