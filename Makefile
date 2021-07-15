@@ -22,14 +22,15 @@ lib :
 
 .PHONY: test
 test :
-	OCAMLRUNPARAM=esy b dune exec ./tests/main.exe
+	OCAMLRUNPARAM=esy dune exec ./tests/main.exe
 
 .PHONY: covtest
 covtest :
 	rm -rf _coverage
 	rm -rf bisect*.coverage
-	BISECT_ENABLE=yes OCAMLRUNPARAM=esy b dune exec ./tests/main.exe
-	bisect-ppx-report html
+	esy dune runtest --instrument-with bisect_ppx --force
+	BISECT_ENABLE=yes OCAMLRUNPARAM=esy dune exec ./tests/main.exe
+	esy bisect-ppx-report html
 
 .PHONY: debug
 debug :

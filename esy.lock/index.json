@@ -1,5 +1,5 @@
 {
-  "checksum": "ccbb43f86b9b4a7108fb70ef4c1caea3",
+  "checksum": "3eaa9170f7b8746d7557ebd032d5dd28",
   "root": "daypack-lib@link-dev:./esy.json",
   "node": {
     "ocaml@4.12.0@d41d8cd9": {
@@ -41,18 +41,21 @@
       "dependencies": [
         "ocaml@4.12.0@d41d8cd9", "@opam/yojson@opam:1.7.0@69d87312",
         "@opam/reason@opam:3.7.0@494dd52d", "@opam/re@opam:1.9.0@9373f267",
-        "@opam/qcheck-alcotest@opam:0.17@a3b4b940",
-        "@opam/qcheck@opam:0.17@7db00cba", "@opam/ptime@opam:0.8.5@0051d642",
-        "@opam/oseq@opam:0.3@1d541f8a",
-        "@opam/ocamlfind-secondary@opam:1.8.1@1afa38b2",
-        "@opam/ocaml-lsp-server@opam:1.7.0@2cdbe0ed",
-        "@opam/mparser@opam:1.3@6b2f5a0b",
-        "@opam/fileutils@opam:0.6.3@67cadc89",
-        "@opam/dune@opam:2.9.0@489e77a9", "@opam/core@opam:v0.14.1@2e486eb2",
+        "@opam/ptime@opam:0.8.5@0051d642", "@opam/oseq@opam:0.3@1d541f8a",
+        "@opam/mparser@opam:1.3@6b2f5a0b", "@opam/dune@opam:2.9.0@489e77a9",
+        "@opam/core@opam:v0.14.1@2e486eb2",
         "@opam/atdgen-runtime@opam:2.2.1@c520dbfc",
         "@opam/alcotest@opam:1.4.0@827862b4"
       ],
-      "devDependencies": []
+      "devDependencies": [
+        "ocaml@4.12.0@d41d8cd9", "@opam/qcheck-alcotest@opam:0.17@a3b4b940",
+        "@opam/qcheck@opam:0.17@7db00cba",
+        "@opam/ocamlfind-secondary@opam:1.8.1@1afa38b2",
+        "@opam/ocaml-lsp-server@opam:1.7.0@2cdbe0ed",
+        "@opam/fileutils@opam:0.6.3@67cadc89",
+        "@opam/bisect_ppx@opam:2.6.0@9ae064f4",
+        "@opam/alcotest@opam:1.4.0@827862b4"
+      ]
     },
     "@opam/yojson@opam:1.7.0@69d87312": {
       "id": "@opam/yojson@opam:1.7.0@69d87312",
@@ -2681,6 +2684,37 @@
         "ocaml@4.12.0@d41d8cd9", "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [ "ocaml@4.12.0@d41d8cd9" ]
+    },
+    "@opam/bisect_ppx@opam:2.6.0@9ae064f4": {
+      "id": "@opam/bisect_ppx@opam:2.6.0@9ae064f4",
+      "name": "@opam/bisect_ppx",
+      "version": "opam:2.6.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/1e/1e87162003525cd853631dae5b4aea66#md5:1e87162003525cd853631dae5b4aea66",
+          "archive:https://github.com/aantron/bisect_ppx/archive/2.6.0.tar.gz#md5:1e87162003525cd853631dae5b4aea66"
+        ],
+        "opam": {
+          "name": "bisect_ppx",
+          "version": "2.6.0",
+          "path": "esy.lock/opam/bisect_ppx.2.6.0"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.12.0@d41d8cd9", "@opam/ppxlib@opam:0.22.2@61009929",
+        "@opam/dune@opam:2.9.0@489e77a9",
+        "@opam/cmdliner@opam:1.0.4@93208aac",
+        "@opam/base-unix@opam:base@87d0b2eb",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.12.0@d41d8cd9", "@opam/ppxlib@opam:0.22.2@61009929",
+        "@opam/dune@opam:2.9.0@489e77a9",
+        "@opam/cmdliner@opam:1.0.4@93208aac",
+        "@opam/base-unix@opam:base@87d0b2eb"
+      ]
     },
     "@opam/biniou@opam:1.2.1@420bda02": {
       "id": "@opam/biniou@opam:1.2.1@420bda02",
